@@ -5,11 +5,11 @@ In this repository, for each module a directory is created within the configurat
 
 Files are:
 * **configuration.yaml** that includes **dombus1.yaml** with all entities for DomBus modules connected to the same bus, and some helpers.
-* **dombus1.yaml** contains entities for all DomBus modules connected to this bus
-* **automations.yaml** contains some automations to configure the module
-* **dashboard_wallbox.yaml** contains a dashboard with main controls for the DomBus module
+* **dombus1.yaml** contains the configuration of Modbus #1 (you can have more buses, each for one serial port)
+* **dombusXXXX.yaml** contains entities for specific DomBus modules connected to this bus
 
-Any Modbus RTU bus can store up to 227 modules, but for large domotic networks with 20 or more modules, it's better to divide the network in more buses (one bus for each floor, for example): in this case it's possible to include in *configuration.yaml* the file *dombus2.yaml* for bus #2, and so on.
+Any Modbus RTU bus can store up to 247 modules, but for large domotic networks with 20 or more modules, it's better to divide the network in more buses (one bus for each floor, for example): in this case it's possible to include in *configuration.yaml* the file *dombus2.yaml* for bus #2, and so on.
+																																															  Please note that for each entity type there is a included file: in this way it's easier to enable/disable configuration file for each module (EVSE module, relay modules, ...)
 
 ## Creasol DomBus modules
 Our industrial and home automation modules are designed to be
