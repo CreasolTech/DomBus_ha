@@ -1,0 +1,22 @@
+- name: "dombus1"
+  type: serial
+  baudrate: 115200
+  bytesize: 8
+  method: rtu
+  parity: N
+  port: /dev/ttyUSB1
+  stopbits: 1
+  #delay between messages (1 for 115200bps, 4 for 9600bps)
+  message_wait_milliseconds: 1 
+  #timeout in seconds (1 is a very long time, but this is the minimum value)
+  timeout: 1
+  retries: 1
+  
+  #DomBusEVSE
+  #lights: !include dombusevse_lights.yaml
+  #binary_sensors: !include dombusevse_binary_sensors.yaml
+  #sensors: !include dombusevse_sensors.yaml
+
+  #DomBus33
+  lights: !include dombus33_lights.yaml
+

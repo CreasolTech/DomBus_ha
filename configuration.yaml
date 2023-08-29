@@ -1,0 +1,32 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+modbus: !include dombus1.yaml
+
+logger:
+    default: warning
+    logs:
+        homeassistant.components.modbus: debug
+        pymodbus: debug
+        homeassistant.components.automation: warning
+
+#DomBusEVSE
+#input_number: !include dombusevse_input_number.yaml
+#input_select: !include dombusevse_input_select.yaml
+#input_button: !include dombusevse_input_button.yaml
+#automation: !include dombusevse_automations.yaml
+
+#DomBus33

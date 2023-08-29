@@ -1,0 +1,7 @@
+# DomBusEVSE
+- name: EVRL2
+  unique_id: 2270001
+  slave: 227
+  address: 1
+  scan_interval: 60
+

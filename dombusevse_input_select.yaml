@@ -1,0 +1,24 @@
+evstatename:
+  name: EVStateName
+  options:
+  - "Off"
+  - Disconnected
+  - Connected
+  - Charging
+  - Charging+Vent
+  - Alarm EV
+  - Alarm Power Outage
+  - Alarm Welded
+  initial: Disconnected
+evmodename:
+  name: EVModeName
+  options:
+  - "Off"
+  - Solar
+  - 25%
+  - 50%
+  - 75%
+  - 100%
+  - Managed
+  initial: "Off"
+

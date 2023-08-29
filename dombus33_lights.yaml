@@ -1,0 +1,23 @@
+# DomBus33
+- name: db33_InAC1
+  unique_id: 33000
+  slave: 51
+  address: 0
+  write_type: holding
+  verify:
+    input_type: holding
+  #scan_interval does not work: only default time is used (15s)
+  #scan_interval: 5
+- name: db33_InAC2
+  unique_id: 33002
+  slave: 51
+  address: 2
+  verify:
+    input_type: holding
+- name: db33_InAC3
+  unique_id: 33004
+  slave: 51
+  address: 4
+  verify:
+    input_type: holding
+

@@ -1,0 +1,14 @@
+# DomBusEVSE
+- name: EVCharging
+  unique_id: 2270000
+  slave: 227
+  address: 0
+  scan_interval: 5
+  device_class: battery_charging
+- name: EVInAC
+  unique_id: 2270002
+  slave: 227
+  address: 2
+  scan_interval: 5
+  device_class: power
+
