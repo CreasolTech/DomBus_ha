@@ -1,0 +1,16 @@
+# Creasol DomBus33: manage 3 existing lights (using step-by-step relays)
+# 5 I/Os configured as pushbutton switches: automations are needed to switch all lights OFF, for example, or something else.
+- name: DB33_IO1
+  unique_id: 33006
+  slave: 51
+  address: 6
+  scan_interval: 5
+  device_class: switch
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+

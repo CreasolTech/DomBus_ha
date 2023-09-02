@@ -14,7 +14,7 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-modbus: !include dombus1.yaml
+modbus: !include dombus/dombus1.yaml
 
 logger:
     default: warning
@@ -24,9 +24,9 @@ logger:
         homeassistant.components.automation: warning
 
 #DomBusEVSE
-#input_number: !include dombusevse_input_number.yaml
-#input_select: !include dombusevse_input_select.yaml
-#input_button: !include dombusevse_input_button.yaml
-#automation: !include dombusevse_automations.yaml
+#input_number: !include dombus/dombusevse/dombusevse_input_number.yaml
+#input_select: !include dombus/dombusevse/dombusevse_input_select.yaml
+#input_button: !include dombus/dombusevse/dombusevse_input_button.yaml
+#automation: !include dombus/dombusevse/dombusevse_automations.yaml
 
 #DomBus33

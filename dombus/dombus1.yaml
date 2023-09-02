@@ -1,0 +1,32 @@
+# Manage Creasol DomBus modules attached to bus #1  (you can make more buses, for example one for each floor or area).
+# Web page about the Modbus standard integration: https://www.home-assistant.io/integrations/modbus/
+- name: "dombus1"
+  type: serial
+  baudrate: 115200
+  bytesize: 8
+  method: rtu
+  parity: N
+  port: /dev/ttyUSB1
+  stopbits: 1
+  #delay between messages (1 for 115200bps, 4 for 9600bps)
+  message_wait_milliseconds: 1 
+  #timeout in seconds (1 is a very long time, but this is the minimum value)
+  timeout: 1
+  retries: 1
+  
+  #Creasol DomBusEVSE EVSE module (for electric vehicle charging)
+  #binary_sensors: !include dombusevse/dombusevse_binary_sensors.yaml
+  #lights: !include dombusevse/dombusevse_lights.yaml
+  #sensors: !include dombusevse/dombusevse_sensors.yaml
+
+  #Creasol DomBusTH : temperature+humidity sensor, touch sensor, 4 I/Os
+  binary_sensors: !include dombusth/dombusth_binary_sensors.yaml
+  lights: !include dombusth/dombusth_lights.yaml
+  sensors: !include dombusth/dombusth_sensors.yaml
+  switches: !include dombusth/dombusth_switches.yaml
+
+  #Creasol DomBus33 : 3 lights management (3 relays, 3 IN AC, 5 I/Os)
+  #lights: !include dombus33/dombus33_lights.yaml
+  #switches: !include dombus33/dombus33_switches.yaml
+
+  

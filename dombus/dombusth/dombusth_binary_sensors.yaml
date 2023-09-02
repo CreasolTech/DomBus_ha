@@ -1,0 +1,27 @@
+# Creasol DomBusTH: small board with temperature+humidity sensor, touch sensor, 3 LEDs, 6 I/Os
+# Ports:
+# 2-4: GPIO, that can be used as digital inputs, analog inputs, ...
+- name: DBTH_IO1_Door
+  unique_id: 810002
+  slave: 81
+  address: 2
+  scan_interval: 1
+  device_class: door
+- name: DBTH_IO2_Window
+  unique_id: 810003
+  slave: 81
+  address: 3
+  scan_interval: 1
+  device_class: window
+- name: DBTH_IO3_Blind
+  unique_id: 810004
+  slave: 81
+  address: 4
+  scan_interval: 1
+  device_class: window
+- name: DBTH_IO4_PIR
+  unique_id: 810005
+  slave: 81
+  address: 5
+  scan_interval: 1
+  device_class: motion

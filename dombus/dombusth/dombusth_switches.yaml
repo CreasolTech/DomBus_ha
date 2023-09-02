@@ -1,0 +1,33 @@
+# Creasol DomBusTH: small board with temperature+humidity sensor, touch sensor, 3 LEDs, 6 I/Os
+# Ports 0-1: open-drain outputs (to control external relays or LEDs)
+# ports 2-5: general purpose I/Os
+- name: DBTH_IO5
+  unique_id: 81000
+  slave: 81
+  address: 0
+  scan_interval: 5
+  device_class: switch
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DBTH_IO6
+  unique_id: 81001
+  slave: 81
+  address: 1
+  scan_interval: 5
+  device_class: switch
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 32
+  verify:
+    input_type: holding
+    delay: 2
+

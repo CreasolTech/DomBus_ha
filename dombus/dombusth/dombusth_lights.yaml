@@ -1,0 +1,22 @@
+- name: DBTH_LedR
+  unique_id: 81007
+  slave: 81
+  address: 7
+- name: DBTH_LedG
+  unique_id: 81008
+  slave: 81
+  address: 8
+  command_on: 30
+  #command_on: 1 => ON forever
+  #command_on: 10*N => send N flashes, forever
+  #command_on: 10*N + M => send N flashes for M times (for example 23 => send 2 flashes and repeat this 3 times with 2s pause
+- name: DBTH_LedW
+  unique_id: 81009
+  slave: 81
+  address: 9
+  command_on: 1
+  #command_on: 1 => ON forever
+  #command_on: 10*N => send N flashes, forever
+  #command_on: 10*N + M => send N flashes for M times (for example 23 => send 2 flashes and repeat this 3 times with 2s pause
+
+

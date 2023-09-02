@@ -1,0 +1,34 @@
+# Creasol DomBusTH: small board with temperature+humidity sensor, touch sensor, 3 LEDs, 6 I/Os
+# Ports:
+# 6: Vbus (volt)
+# 10: Temperature (K*10)
+# 11: Relative humidity (0..1000)
+- name: DBTH_Vbus
+  unique_id: 810006
+  slave: 81
+  address: 6
+  scan_interval: 15
+  device_class: voltage
+  unit_of_measurement: V
+  precision: 1
+  scale: 0.000603556
+- name: DBTH_Temperature
+  unique_id: 810010
+  slave: 81
+  address: 10
+  scan_interval: 30
+  device_class: temperature
+  unit_of_measurement: '˚C'
+  precision: 1
+  scale: 0.1
+  offset: -273.16
+- name: DBTH_Humidity
+  unique_id: 810011
+  slave: 81
+  address: 11
+  scan_interval: 30
+  device_class: humidity
+  unit_of_measurement: '%RH'
+  scale: 0.1
+
+
