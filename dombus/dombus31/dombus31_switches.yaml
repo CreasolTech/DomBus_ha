@@ -1,0 +1,105 @@
+# Creasol DomBus31: DIN rail module with 6 SPST relays + 2 SPDT relays
+- name: DB31_RL1
+  unique_id: 490000
+  slave: 49
+  address: 0
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL2
+  unique_id: 490001
+  slave: 49
+  address: 1
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL3
+  unique_id: 490002
+  slave: 49
+  address: 2
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL4
+  unique_id: 490003
+  slave: 49
+  address: 3
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL5
+  unique_id: 490004
+  slave: 49
+  address: 4
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL6
+  unique_id: 490005
+  slave: 49
+  address: 5
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL7
+  unique_id: 490006
+  slave: 49
+  address: 6
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB31_RL8
+  unique_id: 490007
+  slave: 49
+  address: 7
+  scan_interval: 30
+  device_class: outlet
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1

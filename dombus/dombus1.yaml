@@ -31,8 +31,14 @@
   sensors: !include dombus12/dombus12_sensors.yaml
   switches: !include dombus12/dombus12_switches.yaml
 
+  #Creasol DomBus31 : 6 SPST relays + 2 SPDT relays
+  #switches: !include dombus31/dombus31_switches.yaml
+
   #Creasol DomBus33 : 3 lights management (3 relays, 3 IN AC, 5 I/Os)
   #lights: !include dombus33/dombus33_lights.yaml
   #switches: !include dombus33/dombus33_switches.yaml
+
+  #Creasol DomBus36 : 12 SPST relays
+  #switches: !include dombus36/dombus36_switches.yaml
 
   
