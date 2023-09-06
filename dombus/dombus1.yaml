@@ -25,6 +25,12 @@
   sensors: !include dombusth/dombusth_sensors.yaml
   switches: !include dombusth/dombusth_switches.yaml
 
+  #Creasol DomBus12 : 9 I/Os compact module
+  binary_sensors: !include dombus12/dombus12_binary_sensors.yaml
+  lights: !include dombus12/dombus12_lights.yaml
+  sensors: !include dombus12/dombus12_sensors.yaml
+  switches: !include dombus12/dombus12_switches.yaml
+
   #Creasol DomBus33 : 3 lights management (3 relays, 3 IN AC, 5 I/Os)
   #lights: !include dombus33/dombus33_lights.yaml
   #switches: !include dombus33/dombus33_switches.yaml

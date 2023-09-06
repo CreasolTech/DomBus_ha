@@ -1,0 +1,29 @@
+# Creasol DomBus12: small board with 9 general purpose I/Os, 2 of which are configured by default as open-drain output to drive relay coils or LEDs (100mA max)
+# IO3 configured as analog value connected to an external 10k 3950 NTC temperature sensor: this sensor return the analog voltage, that will be transformed by a math operation
+# Please configure IO3 (register 256+2=258) to 8 (IN_ANALOG)!
+- name: DB12_IO3_NTC3
+  unique_id: 180002
+  slave: 18
+  address: 2
+  scan_interval: 30
+  data_type: uint16
+# IO4 configured as distance sensor, to measure water tank level
+# Please configure IO4 (register 256+3=259) and IO7 (sensor trigger, 256+6=262) to 13 (SENSOR_DISTANCE)!
+- name: DB12_IO4_WaterLevel
+  unique_id: 180003
+  slave: 18
+  address: 3
+  scan_interval: 30
+  device_class: distance
+  unit_of_measurement: cm
+  scale: -0.1
+  offset: 250
+  precision: 1
+#Port IO7 configured as distance sensor trigger: no need to display it
+#- name: DB12_DistanceTrigger
+#  unique_id: 18006
+#  slave: 18
+#  address: 6
+#  scan_interval: 15
+
+

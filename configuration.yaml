@@ -14,7 +14,11 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+# DomBus modules connected to a Modbus RS485 bus
 modbus: !include dombus/dombus1.yaml
+# Another bus to connect other DomBus modules...
+# modbus: !include dombus/dombus2.yaml
+template: !include dombus/dombus_template.yaml
 
 logger:
     default: warning
@@ -22,11 +26,3 @@ logger:
         homeassistant.components.modbus: debug
         pymodbus: debug
         homeassistant.components.automation: warning
-
-#DomBusEVSE
-#input_number: !include dombus/dombusevse/dombusevse_input_number.yaml
-#input_select: !include dombus/dombusevse/dombusevse_input_select.yaml
-#input_button: !include dombus/dombusevse/dombusevse_input_button.yaml
-#automation: !include dombus/dombusevse/dombusevse_automations.yaml
-
-#DomBus33

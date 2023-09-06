@@ -1,0 +1,32 @@
+# Creasol DomBus12: small module with 9 configurable I/Os
+# Ports IO5 and IO6: open-drain outputs (to control external relays or LEDs)
+- name: DB12_IO5
+  unique_id: 18004
+  slave: 18
+  address: 4
+  scan_interval: 5
+  device_class: switch
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 1
+- name: DB12_IO6
+  unique_id: 18005
+  slave: 18
+  address: 5
+  scan_interval: 5
+  device_class: switch
+  #command on: 
+  # 1 => ON forever, 2
+  # From 2 to 1920 → N*31.25ms (1920=60s)
+  # From 1921 (61s) to 3540 (3600s=1h) → 1s resolution
+  # From 5461 (61m), 6840 (1440m=24h) → 1m resolution
+  # From 6841 (25h) to 65535 → 1h resolution
+  command_on: 32
+  verify:
+    input_type: holding
+    delay: 2
+

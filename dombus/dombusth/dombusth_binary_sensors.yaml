@@ -25,3 +25,8 @@
   address: 5
   scan_interval: 1
   device_class: motion
+- name: DBTH_Touch
+  unique_id: 810013
+  slave: 81
+  address: 13
+  scan_interval: 1

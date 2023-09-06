@@ -1,0 +1,11 @@
+- sensor:
+  # temperature derived by a NTC sensor, with 10k nominal resistance and B=3950 coefficient
+  - name: "DB12_Temperature_NTCIO3"
+    # set variable "value" to the analog value returned by the analog input (set the right analog input entity)
+    # then compute the temperature using the NTC formula
+    state: >
+      {% set value = states('sensor.db12_io3_ntc3') | float %}
+      {% set temp = ((1 / ( (log (value / (65535 - value))) / 3950 + (1 / 298.15))) -273.15) | round(1)  %}
+      {{ temp }}
+    device_class: temperature
+    unit_of_measurement: "°C"
