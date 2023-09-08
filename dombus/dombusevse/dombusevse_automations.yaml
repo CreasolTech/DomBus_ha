@@ -1,3 +1,4 @@
+# Set the EVMAXCURRENT parameter
 - id: '1686869578501'
   alias: EVMaxCurrentAutomation
   trigger:
@@ -9,10 +10,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9001
       slave: 227
+      address: 9001
       value: '{{ states(''input_number.evmaxcurrent'') | int }}'
   mode: single
+# Set the EVMAXPOWER parameter
 - id: '1686869578502'
   alias: EVMaxGridPowerAutomation
   trigger:
@@ -22,10 +24,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9002
       slave: 227
+      address: 9002
       value: '{{ states(''input_number.evmaxgridpower'') | int }}'
   mode: single
+# Set the EVSTARTPOWER parameter
 - id: '1686869578503'
   alias: EVStartPowerAutomation
   trigger:
@@ -35,10 +38,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9003
       slave: 227
+      address: 9003
       value: '{{ states(''input_number.evstartpower'') | int }}'
   mode: single
+# Set the EVSTOPTIME parameter
 - id: '1686869578504'
   alias: EVStopTimeAutomation
   trigger:
@@ -48,10 +52,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9004
       slave: 227
+      address: 9004
       value: '{{ states(''input_number.evstoptime'') | int }}'
   mode: single
+# Set the EVAUTOSTART parameter
 - id: '1686869578505'
   alias: EVAutoStartAutomation
   trigger:
@@ -61,10 +66,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9005
       slave: 227
+      address: 9005
       value: '{{ states(''input_number.evautostart'') | int }}'
   mode: single
+# Set the EVMAXPOWER2 parameter
 - id: '1686869578506'
   alias: EVMaxPower2
   trigger:
@@ -74,10 +80,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9006
       slave: 227
+      address: 9006
       value: '{{ states(''input_number.evmaxpower2'') | int }}'
   mode: single
+# Set the EVMAXPOWERTIME parameter
 - id: '1686869578507'
   alias: EVMaxPowerTimeAutomation
   trigger:
@@ -87,10 +94,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9007
       slave: 227
+      address: 9007
       value: '{{ states(''input_number.evmaxpowertime'') | int }}'
   mode: single
+# Set the EVMAXPOWERTIME2 parameter
 - id: '1686869578508'
   alias: EVMaxPowerTime2Automation
   trigger:
@@ -100,10 +108,11 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9008
       slave: 227
+      address: 9008
       value: '{{ states(''input_number.evmaxpowertime2'') | int }}'
   mode: single
+# Set the EVWAITTIME parameter
 - id: '1686869578509'
   alias: EVWaitTimeAutomation
   trigger:
@@ -113,12 +122,12 @@
   - service: modbus.write_register
     data:
       hub: dombus1
-      address: 9009
       slave: 227
+      address: 9009
       value: '{{ states(''input_number.evwaittime'') | int }}'
   mode: single
+# Update the EVStateName entity with the name associated to EVState number (convert from numeric state to mnemonic)
 - id: "evstatenameautomation"
-  alias: "Automation that updates EVStateName entity when EVState changes"
   trigger:
   - platform: state
     entity_id: sensor.evstate
@@ -130,8 +139,8 @@
           {% set slist = state_attr('input_select.evstatename','options') %}
           {% set item = states.sensor.evstate.state|int %}
           {{slist[item]}}
+# Update the EVModeName entity with the name associated to the current EVMode value (convert from numeric state to mnemonic)
 - id: "evmodenameautomation"
-  alias: "Automation that updates EVModeName entity when EVMode changes"
   trigger:
   - platform: state
     entity_id: sensor.evmode
@@ -143,8 +152,8 @@
           {% set slist = state_attr('input_select.evmodename','options') %}
           {% set item = states.sensor.evmode.state|int %}
           {{slist[item]}}
+# Update EVMode from EVModeName when button EVStateSet is pushed"
 - id: "evmodenameautomationrev"
-  alias: "Automation that updates EVMode from EVModeName when button EVStateSet is pushed"
   trigger:
   - platform: state
     entity_id: input_button.evmodeset
@@ -152,8 +161,8 @@
     - service: modbus.write_register
       data:
         hub: dombus1
-        address: 3
         slave: 227
+        address: 3
         value: >
           {% set slist = state_attr('input_select.evmodename','options') %}
           {% set itemname = states.input_select.evmodename.state %}
@@ -163,31 +172,19 @@
               {{ loop.index0 }}
           {% endif %}
           {% endfor %}
-#DomBus33          
-#- id: 'dombus33addrautomation'
-#  alias: DomBus33AddrAutomation
-#  trigger:
-#  - platform: state
-#    entity_id: input_number.dombus33addr
-#  action:
-#  - service: modbus.write_register
-#    data:
-#      hub: dombus1
-#      slave: 51
-#      address: 8192
-#      value: '{{ states(''input_number.dombus33addr'') | int }}'
-#  mode: single
-#- id: 'dombus33rl1'
-#  alias: DomBus33RL1Automation
-#  trigger:
-#  - platform: state
-#    entity_id: light.db33_rl1
-#  action:
-#  - service: modbus.write_register
-#    data:
-#      hub: dombus1
-#      slave: 51
-#      address: 1
-#      value: '{{ states(''input_number.db33_rl1'') | int }}'
-#  mode: single
+# Set the GridPower EVSE entity with the current power sinked from the electrical grid
+- id: 'evgridpowerautomation'
+  alias: EVGridPowerAutomation
+  trigger:
+  - platform: state
+# Set below your grid power meter entity 
+    entity_id: sensor.evpower
+  action:
+  - service: modbus.write_register
+    data:
+      hub: dombus1
+      slave: 227
+      address: 11
+      value: '{{ states(''sensor.evpower'') | int }}'
+  mode: single
 

@@ -9,7 +9,9 @@ Files are:
 * **dombusXXXX.yaml** contains entities for specific DomBus modules connected to this bus
 
 Any Modbus RTU bus can store up to 247 modules, but for large domotic networks with 20 or more modules, it's better to divide the network in more buses (one bus for each floor, for example): in this case it's possible to include in *configuration.yaml* the file *dombus2.yaml* for bus #2, and so on.
-																																															  Please note that for each entity type there is a included file: in this way it's easier to enable/disable configuration file for each module (EVSE module, relay modules, ...)
+																																															  Please note that for each entity type there is a included file: in this way it's easier to enable/disable configuration file for each module ( EVSE module, relay modules, ... )
+
+[More information on DomBus modules with Home Assistant](https://www.creasol.it/HomeAssistant)
 
 ## Creasol DomBus modules
 Our industrial and home automation modules are designed to be

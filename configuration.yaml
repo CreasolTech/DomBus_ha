@@ -18,7 +18,13 @@ scene: !include scenes.yaml
 modbus: !include dombus/dombus1.yaml
 # Another bus to connect other DomBus modules...
 # modbus: !include dombus/dombus2.yaml
+# Include template with some additional entities
 template: !include dombus/dombus_template.yaml
+# Include some automations and helpers for DomBusEVSE EV charging module
+automation: !include dombus/dombusevse/dombusevse_automations.yaml
+input_button: !include dombus/dombusevse/dombusevse_input_button.yaml
+input_number: !include dombus/dombusevse/dombusevse_input_number.yaml
+input_select: !include dombus/dombusevse/dombusevse_input_select.yaml
 
 logger:
     default: warning
