@@ -40,6 +40,12 @@ Relays are protected from overvoltage and overcurrent, and module has a **very l
 
 [![DomBus36 module with 12 relay outputs](https://images.creasol.it/creDomBus36.webp "12 relays module for HomeAssistant with very very low power consumption")](https://www.creasol.it/en/?view=article&option=com_content&id=166)
 
+## DomBus37
+DomBus37 is a **versatile module integrating inputs, AC inputs (to sense 230V presence) and relay outputs**.
+
+In the application note below the simplest configuration with Home Assistant.
+[![DomBus37 module with 12 inputs, 3 AC optoisolated inputs, 3 relay outputs](https://images.creasol.it/ha_creDomBus37_entities.webp "12 inputs, 3 AC optoisolated inputs, 3 relay outputs module for HomeAssistant")](https://www.creasol.it/en/?view=article&option=com_content&id=169)
+
 
 ## DomBus12
 DomBus12 is a **compact and cost effective module with 9 I/Os**. Each I/O can be configured as button, switch, double-pushbutton (UP/DOWN pushbutton connected to a single port), counter, meter, NTC temperature sensor, distance sensor, buzzer, led, ...
