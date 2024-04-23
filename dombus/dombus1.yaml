@@ -15,9 +15,9 @@
   retries: 1
   
   #Creasol DomBusEVSE EVSE module (for electric vehicle charging)
-  binary_sensors: !include dombusevse/dombusevse_binary_sensors.yaml
-  lights: !include dombusevse/dombusevse_lights.yaml
-  sensors: !include dombusevse/dombusevse_sensors.yaml
+#  binary_sensors: !include dombusevse/dombusevse_binary_sensors.yaml
+#  lights: !include dombusevse/dombusevse_lights.yaml
+#  sensors: !include dombusevse/dombusevse_sensors.yaml
 
   #Creasol DomBusTH : temperature+humidity sensor, touch sensor, 4 I/Os
 #  binary_sensors: !include dombusth/dombusth_binary_sensors.yaml
@@ -40,5 +40,10 @@
 
   #Creasol DomBus36 : 12 SPST relays
   #switches: !include dombus36/dombus36_switches.yaml
+  
+  #Creasol DomBus37 : 12 inputs, 3 AC inputs, 3 relays
+  #switches: !include dombus37/dombus37_switches.yaml
+  binary_sensors: !include dombus37/dombus37_binary_sensors.yaml
+  lights: !include dombus37/dombus37_lights.yaml
 
   

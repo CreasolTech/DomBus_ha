@@ -1,0 +1,17 @@
+# DomBus37
+# 3 relay outputs
+- name: DB37_RL1
+  unique_id: 37015
+  slave: 55
+  address: 15
+  write_type: holding
+- name: DB37_RL2
+  unique_id: 37016
+  slave: 55
+  address: 16
+  write_type: holding
+- name: DB37_RL3
+  unique_id: 37017
+  slave: 55
+  address: 17
+  write_type: holding

@@ -1,5 +1,5 @@
 # Using Creasol DomBus modules with Home Assistant
-DomBus modules can be supplied with two firmware: please choose *Modbus firmware* if you intend to use it with Home Assistant.
+DomBus modules can be supplied with two firmwares: please choose *Modbus firmware* if you intend to use it with Home Assistant.
 
 In this repository, for each module a directory is created within the configuration files to use DomBus modules with Home Assistant.
 

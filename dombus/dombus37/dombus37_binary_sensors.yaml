@@ -1,0 +1,19 @@
+# DomBus37 inputs: 12 low voltage inputs 
+# Note: entities will be named DB37_In , DB37_In 1, .... must be renamed manually in the UI
+- name: DB37_In
+  unique_id: 37000
+  slave: 55
+  address: 0
+  slave_count: 11
+  device_class: door
+  scan_interval: 5
+# 3 AC inputs (active when 230Vac is applied to the input terminal block)
+- name: DB37_InAC
+  unique_id: 37012
+  slave: 55
+  address: 12
+  slave_count: 2
+  device_class: power
+  scan_interval: 5
+
+
