@@ -13,6 +13,44 @@ Any Modbus RTU bus can store up to 247 modules, but for large domotic networks w
 
 [More information on DomBus modules with Home Assistant](https://www.creasol.it/HomeAssistant)
 
+## DomBusEVSE EVSE module to make a Smart Wallbox EV Charging Station
+Home Assistant configuration files for DomBusEVSE module used to make a DIY smart wallbox charging station
+[![alt DomBusEVSE DIY wallbox home-made](https://images.creasol.it/creDomBusEVSE_dashboard1.png "Modulo EVSE per autocostruirsi una smart wallbox")](https://www.creasol.it/en/support/domotics-home-automation-and-diy/making-a-diy-homemade-wallbox-working-with-home-assistant)
+
+More information in the web pages:
+
+* [DomBusEVSE page](https://www.creasol.it/EVSE)
+* [DomBusEVSE with Home Assistant](https://www.creasol.it/en/support/domotics-home-automation-and-diy/making-a-diy-homemade-wallbox-working-with-home-assistant)
+* [Creasol store](https://store.creasol.it/en/18-ev-electric-vehicles)
+
+### Youtube video showing DomBusEVSE working with Domoticz 
+[![How DomBusEVSE works - Video using Domoticz, in this case](https://img.youtube.com/vi/m_n_A4lo9Gw/0.jpg)](https://youtu.be/m_n_A4lo9Gw)
+
+### Home made wallbox using DomBusEVSE and Home Assistant
+[![DomBusEVSE connections](https://images.creasol.it/creDomBusEVSE_wallbox_photo_ha.jpg "DIY wallbox using Creasol DomBusEVSE module with Home Assistant")](https://www.creasol.it/en/?view=article&option=com_content&id=160)
+
+[![DomBusEVSE connections schematic](https://images.creasol.it/creDomBusEVSE_blockAll.webp "Home-made smart wallbox using Creasol DomBusEVSE module with HomeAssistant")](https://www.creasol.it/en/?view=article&option=com_content&id=160)
+
+[![DomBusEVSE connections schematic for three-phase power supply](https://images.creasol.it/creDomBusEVSE_blockAll_3p.webp "Home-made smart wallbox using Creasol DomBusEVSE module with HomeAssistant, three-phase")](https://www.creasol.it/en/?view=article&option=com_content&id=160)
+
+## DomBus36 
+DomBus36 is a **high efficiency  module with 12 relay outputs**, grouped in 3 groups to have an easier wiring: each group share the same common, so you **don't need to make jumpers to connect the common wire (Line, Neutral, Ground or +12/24V) to all relays**.
+
+Relays are protected from overvoltage and overcurrent, and module has a **very low power consumption: less than 15mW with all relays OFF, and less than 750mW when all 12 relays are ON**. Can you compare this power consumption with other modules in the market?
+
+[![DomBus36 module with 12 relay outputs](https://images.creasol.it/creDomBus36.webp "12 relays module for HomeAssistant with very very low power consumption")](https://www.creasol.it/en/?view=article&option=com_content&id=166)
+
+
+## DomBus12
+DomBus12 is a **compact and cost effective module with 9 I/Os**. Each I/O can be configured as button, switch, double-pushbutton (UP/DOWN pushbutton connected to a single port), counter, meter, NTC temperature sensor, distance sensor, buzzer, led, ...
+
+Below an application example.
+
+[![DomBus12 compact module with 9 configurable I/Os](https://images.creasol.it/an_creDomBus12_ha_garage_watering.webp "DomBus12 compact module for Home Assistant, with 9 configurable GPIO")](https://www.creasol.it/en/?view=article&option=com_content&id=153)
+
+
+
+
 ## Creasol DomBus modules
 Our industrial and home automation modules are designed to be
 * very low power (**around 10mW with relays OFF**)
