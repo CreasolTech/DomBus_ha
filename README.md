@@ -17,10 +17,15 @@ Any Modbus RTU bus can store up to 247 modules, but for large domotic networks w
 Home Assistant configuration files for DomBusEVSE module used to make a DIY smart wallbox charging station
 [![alt DomBusEVSE DIY wallbox home-made](https://images.creasol.it/creDomBusEVSE_dashboard1.png "Modulo EVSE per autocostruirsi una smart wallbox")](https://www.creasol.it/en/support/domotics-home-automation-and-diy/making-a-diy-homemade-wallbox-working-with-home-assistant)
 
+In case that an energy meter to measure the grid power already exists, you don't need to install another energy meter: just use a simple automation to feed the current power from the grid (negative if power is exported to the grid) to the EVSE module, as shown in the following picture (check file *dombus/dombusevse/dombusevse_automations.yaml*)
+![Automation example that feeds the grid power value to the EVSE: replace **evpower** with the name of your power entity](https://images.creasol.it/creDomBusEVSE_GridPowerAutomation.jpg "Automation example that feeds the grid power value to the EVSE: replace **evpower** with the name of your power entity")
+
+
+
 More information in the web pages:
 
 * [DomBusEVSE page](https://www.creasol.it/EVSE)
-* [DomBusEVSE with Home Assistant](https://www.creasol.it/en/support/domotics-home-automation-and-diy/making-a-diy-homemade-wallbox-working-with-home-assistant)
+* [DomBusEVSE with Home Assistant](https://www.creasol.it/en/support/domotics-home-automation-and-diy/making-a-diy-homemade-wallbox-working-with-home-assistant-to-charge-electric-vehicles)
 * [Creasol store](https://store.creasol.it/en/18-ev-electric-vehicles)
 
 ### Youtube video showing DomBusEVSE working with Domoticz 
