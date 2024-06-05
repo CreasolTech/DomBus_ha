@@ -177,14 +177,20 @@
   alias: EVGridPowerAutomation
   trigger:
   - platform: state
-# Set below your grid power meter entity 
-    entity_id: sensor.evpower
+# replace gridpower with name of your grid power meter entity 
+    entity_id: sensor.gridpower
   action:
   - service: modbus.write_register
     data:
       hub: dombus1
       slave: 227
       address: 11
-      value: '{{ states(''sensor.evpower'') | int }}'
+# replace gridpower with name of your grid power meter entity 
+      value: >
+        {% if states('sensor.gridpower')|int < 0 %}
+          {{ 65536 + states('sensor.gridpower') | int }}
+        {% else %}
+          {{ states('sensor.gridpower') | int }}
+        {% endif %}
   mode: single
 
