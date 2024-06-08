@@ -53,6 +53,12 @@ evwaittime: # Range: 3-60s
   min: 3
   max: 60
   step: 1
+evmetertype: # Range: 0=single phase, 1=three phase
+  name: EVMeterType
+  initial: 0
+  min: 0
+  max: 1
+  step: 1
 #DomBus33
 dombus33addr:
   name: DomBus33Address

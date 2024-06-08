@@ -126,6 +126,20 @@
       address: 9009
       value: '{{ states(''input_number.evwaittime'') | int }}'
   mode: single
+# Set the EVMETERTYPE parameter: 0=single phase, 1=three phase
+- id: '16868695785010'
+  alias: EVMeterTypeAutomation
+  trigger:
+  - platform: state
+    entity_id: input_number.evmetertype
+  action:
+  - service: modbus.write_register
+    data:
+      hub: dombus1
+      slave: 227
+      address: 9010
+      value: '{{ states(''input_number.evmetertype'') | int }}'
+  mode: single
 # Update the EVStateName entity with the name associated to EVState number (convert from numeric state to mnemonic)
 - id: "evstatenameautomation"
   trigger:
