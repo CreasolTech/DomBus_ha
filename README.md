@@ -75,7 +75,7 @@ Modules are available in two version:
 [Store website](https://store.creasol.it/domotics) - [Information website](https://www.creasol.it/domotics)
 
 ### Youtube video showing DomBus modules 
-[![Creasol DomBus modules video](https://images.creasol.it/intro01_video.png)](https://youtu.be/3LhiitEsfus)
+[![Creasol DomBus modules video](https://images.creasol.it/intro01_video.png)](https://www.creasol.it/DomBusVideo){:target="_blank"}
 
 
 ### DomBusEVSE - EVSE module to build a Smart Wallbox / EV charging station
