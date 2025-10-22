@@ -22,6 +22,10 @@ Home Assistant configuration files for DomBusEVSE module used to make a DIY smar
 In case that an energy meter to measure the grid power already exists, you don't need to install another energy meter: just use a simple automation to feed the current power from the grid (negative if power is exported to the grid) to the EVSE module, as shown in the following picture (check file *dombus/dombusevse/dombusevse_automations.yaml*)
 ![Automation example that feeds the grid power value to the EVSE: replace **evpower** with the name of your power entity](https://images.creasol.it/creDomBusEVSE_GridPowerAutomation.jpg "Automation example that feeds the grid power value to the EVSE: replace **evpower** with the name of your power entity")
 
+**Want to build a home-made, full features, EV charging station? Discover our KITs!** \
+ [KIT for single phase wallbox](https://store.creasol.it/EVSE1P) \
+ [KIT for three phase wallbox](https://store.creasol.it/EVSE3P)
+
 
 
 More information in the web pages:
