@@ -1,68 +1,68 @@
 #DomBusEVSE
 evmaxcurrent: # Range: 6-36A
   name: EVMaxCurrent
-  initial: 16
+  #initial: 16
   min: 6
   max: 36
   step: 1
 evmaxgridpower: # Range: 1000-25000W
   name: EVMaxGridPower
-  initial: 3300
+  #initial: 3300
   min: 3000
   max: 8000
   step: 100
 evstartpower: # Range: 800-25000W
   name: EVStartPower
-  initial: 1600
+  #initial: 1600
   min: 800
   max: 4000
   step: 100
 evstoptime: # Range: 5-600s
   name: EVStopTime
-  initial: 90
+  #initial: 90
   min: 5
   max: 900
   step: 5
 evautostart: # Range: 0-1
   name: EVAutoStart
-  initial: 1
+  #initial: 1
   min: 0
   max: 1
   step: 1
 evmaxpower2: # Range: 0-25000W
   name: EVMaxPower2
-  initial: 0
+  #initial: 0
   min: 0
   max: 8000
   step: 100
 evmaxpowertime: # Range: 0-43200s
   name: EVMaxPowerTime
-  initial: 0
+  #initial: 0
   min: 0
   max: 43200
   step: 60
 evmaxpowertime2: # Range: 0-43200s
   name: EVMaxPowerTime2
-  initial: 0
+  #initial: 0
   min: 0
   max: 43200
   step: 60
 evwaittime: # Range: 3-60s
   name: EVWaitTime
-  initial: 7
+  #initial: 7
   min: 3
   max: 60
   step: 1
 evmetertype: # Range: 0=single phase, 1=three phase
   name: EVMeterType
-  initial: 0
+  #initial: 0
   min: 0
   max: 1
   step: 1
 #DomBus33
 dombus33addr:
   name: DomBus33Address
-  initial: 0x33
+  #initial: 0x33
   min:  1
   max:  254
   step: 1

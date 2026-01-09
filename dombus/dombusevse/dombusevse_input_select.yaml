@@ -9,7 +9,7 @@ evstatename:
   - Alarm EV
   - Alarm Power Outage
   - Alarm Welded
-  initial: Disconnected
+  #initial: Disconnected
 evmodename:
   name: EVModeName
   options:
@@ -20,5 +20,5 @@ evmodename:
   - 75%
   - 100%
   - Managed
-  initial: "Off"
+  #initial: "Off"
 
