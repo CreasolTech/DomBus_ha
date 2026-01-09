@@ -141,31 +141,43 @@
       value: '{{ states(''input_number.evmetertype'') | int }}'
   mode: single
 # Update the EVStateName entity with the name associated to EVState number (convert from numeric state to mnemonic)
-- id: "evstatenameautomation"
-  trigger:
-  - platform: state
-    entity_id: sensor.evstate
-  action:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.evstatename
-        option: >
-          {% set slist = state_attr('input_select.evstatename','options') %}
-          {% set item = states.sensor.evstate.state|int %}
-          {{slist[item]}}
+- id: evstatenameautomation
+  triggers:
+  - entity_id: sensor.evstate
+    trigger: state
+  - event: start
+    trigger: homeassistant
+  actions:
+  - data:
+      option: '{% set slist = state_attr(''input_select.evstatename'',''options'')
+        %}
+
+        {% set item = states.sensor.evstate.state|int %}
+
+        {{slist[item]}}
+
+        '
+    action: input_select.select_option
+    target:
+      entity_id: input_select.evstatename
 # Update the EVModeName entity with the name associated to the current EVMode value (convert from numeric state to mnemonic)
-- id: "evmodenameautomation"
-  trigger:
-  - platform: state
-    entity_id: sensor.evmode
-  action:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.evmodename
-        option: >
-          {% set slist = state_attr('input_select.evmodename','options') %}
-          {% set item = states.sensor.evmode.state|int %}
-          {{slist[item]}}
+- id: evmodenameautomation
+  triggers:
+  - entity_id: sensor.evmode
+    trigger: state
+  - event: start
+    trigger: homeassistant
+  actions:
+  - data:
+      option: '{% set slist = state_attr(''input_select.evmodename'',''options'')
+        %}
+
+        {% set item = states.sensor.evmode.state|int %}
+
+        {{slist[item]}} '
+    action: input_select.select_option
+    target:
+      entity_id: input_select.evmodename
 # Update EVMode from EVModeName when button EVStateSet is pushed"
 - id: "evmodenameautomationrev"
   trigger:
