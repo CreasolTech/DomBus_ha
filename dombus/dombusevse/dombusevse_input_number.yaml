@@ -5,29 +5,36 @@ evmaxcurrent: # Range: 6-36A
   min: 6
   max: 36
   step: 1
+  unit_of_measurement: A
+  icon: mdi:current-ac
 evmaxgridpower: # Range: 1000-25000W
   name: EVMaxGridPower
   #initial: 3300
   min: 3000
-  max: 8000
+  max: 22000
   step: 100
+  unit_of_measurement: W
+  icon: mdi:flash
 evstartpower: # Range: 800-25000W
   name: EVStartPower
   #initial: 1600
   min: 800
   max: 4000
   step: 100
+  unit_of_measurement: W
+  icon: mdi:flash
 evstoptime: # Range: 5-600s
   name: EVStopTime
   #initial: 90
   min: 5
   max: 900
   step: 5
-evautostart: # Range: 0-1
+  unit_of_measurement: s
+evautostart: # Range: 0-2 (0 = function disabled, 1 = function enabled, 2 = function disabled + when unplugged, EVMode is set to Off)
   name: EVAutoStart
   #initial: 1
   min: 0
-  max: 1
+  max: 2
   step: 1
 evmaxpower2: # Range: 0-25000W
   name: EVMaxPower2
@@ -35,25 +42,30 @@ evmaxpower2: # Range: 0-25000W
   min: 0
   max: 8000
   step: 100
+  unit_of_measurement: W
+  icon: mdi:flash
 evmaxpowertime: # Range: 0-43200s
   name: EVMaxPowerTime
   #initial: 0
   min: 0
   max: 43200
   step: 60
+  unit_of_measurement: s
 evmaxpowertime2: # Range: 0-43200s
   name: EVMaxPowerTime2
   #initial: 0
   min: 0
   max: 43200
   step: 60
+  unit_of_measurement: s
 evwaittime: # Range: 3-60s
   name: EVWaitTime
   #initial: 7
   min: 3
   max: 60
   step: 1
-evmetertype: # Range: 0=single phase, 1=three phase
+  unit_of_measurement: s
+evmetertype: # Range: 0=single phase, 1=three phase, 2=No power meter, single phase, No power meter, three phase
   name: EVMeterType
   #initial: 0
   min: 0
